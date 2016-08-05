@@ -1,0 +1,12 @@
+<h1>Dogs</h1>
+<p>List of dogs</p>
+<ul class="demo-list-icon mdl-list">
+    <li class="mdl-list__item" *ngFor="let dog of dogs | async">
+        <span class="mdl-list__item-primary-content">
+            <i class="material-icons mdl-list__item-icon">pets</i>
+            <a [routerLink]="['/dogs', dog.id.$t]">{{ dog.name.$t }}</a>
+        </span>
+    </li>
+</ul>
+
+<!-- The trailing .$t is as a result of the API structure and not and Angular thing so you do not have to worry about that -->
