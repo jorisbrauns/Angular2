@@ -6,14 +6,18 @@
   // map tells the System loader where to look for things
   var map = {
     'application':                'application', // 'dist',
+    'application/translate':      'application/translate',
     '@angular':                   'node_modules/@angular',
     'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
     'rxjs':                       'node_modules/rxjs',
-    'moment':                     'node_modules/moment/moment.js'
+    'moment':                     'node_modules/moment/moment.js',
+    'ts':                         'https://npmcdn.com/plugin-typescript@4.0.10/lib/plugin.js',
+    'typescript':                 'https://npmcdn.com/typescript@1.9.0-dev.20160409/lib/typescript.js'
   };
   // packages tells the System loader how to load when no filename and/or no extension
   var packages = {
     'application':                { main: 'main.js',  defaultExtension: 'js' },
+    'application/translate':      { main: 'index.ts', defaultExtension: 'ts' },
     'rxjs':                       { defaultExtension: 'js' },
     'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
   };
@@ -42,6 +46,17 @@
   // Add package entries for angular packages
   ngPackageNames.forEach(setPackageConfig);
   var config = {
+    // DEMO ONLY! REAL CODE SHOULD NOT TRANSPILE IN THE BROWSER
+    transpiler: 'ts',
+    typescriptOptions: {
+      tsconfig: true
+    },
+    meta: {
+      'typescript': {
+        "exports": "ts"
+      }
+    },
+    // End
     map: map,
     packages: packages
   };
