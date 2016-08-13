@@ -1,11 +1,7 @@
 // Imports
 import { provideRouter, RouterConfig } from '@angular/router';
-import { CatListComponent } from './cat.component/cat-list.component';
-import { DogListComponent } from './dog.component/dog-list.component';
-import { DogRoutes }    from './dog.component/dog.routes';
-import { CatRoutes }    from './cat.component/cat.routes';
 import { AlertComponent } from 'ng2-bootstrap/ng2-bootstrap';
-import { DashboardComponent } from './dashboard.component/dashboard.component';
+import { DashboardRoutes } from './dashboard.component/dashboard.route';
 
 // Route Configuration
 export const routes: RouterConfig = [
@@ -14,10 +10,8 @@ export const routes: RouterConfig = [
     redirectTo: '/dashboard',
     pathMatch: 'full'
   },
-  // { path: 'cats', component: CatListComponent },
- { path: 'dashboard', component: DashboardComponent },
-  ...DogRoutes,
-  ...CatRoutes
+//  { path: 'dashboard', component: DashboardComponent },
+  ...DashboardRoutes,
 ];
 
 // Export routes
