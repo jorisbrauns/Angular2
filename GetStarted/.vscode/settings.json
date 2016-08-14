@@ -1,0 +1,9 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/*.js": true,
+        "**/systemjs.config.js":false,
+        "**/*.js.map": true
+    }
+}

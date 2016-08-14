@@ -1,20 +1,24 @@
-import * as app                    from './';
 import { NgModule }                 from '@angular/core';
 import { BrowserModule }            from '@angular/platform-browser';
 import { FormsModule }              from '@angular/forms';
 import { DashboardComponent }       from './dashboard/dashboard.component';
-import { PersonComponent }          from './person';
+import { Team4TalentComponent }     from './team4talent/team4talent.component';
+import { PersonComponent }          from './person/person.component';
+import { AppComponent }             from './app.component';
+import { Routing }                  from './app.routing';
 
 @NgModule({
   imports: [
     BrowserModule,
-    app.Routing,
+    Routing,
     FormsModule
   ],
   declarations: [
-    app.AppComponent,
+    AppComponent,
+    DashboardComponent,
+    Team4TalentComponent,
     PersonComponent
   ],
-  bootstrap: [app.AppComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

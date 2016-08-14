@@ -8,11 +8,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var app = require('./');
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
-var person_1 = require('./person');
+var dashboard_component_1 = require('./dashboard/dashboard.component');
+var team4talent_component_1 = require('./team4talent/team4talent.component');
+var person_component_1 = require('./person/person.component');
+var app_component_1 = require('./app.component');
+var app_routing_1 = require('./app.routing');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -20,14 +23,16 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [
                 platform_browser_1.BrowserModule,
-                app.Routing,
+                app_routing_1.Routing,
                 forms_1.FormsModule
             ],
             declarations: [
-                app.AppComponent,
-                person_1.PersonComponent
+                app_component_1.AppComponent,
+                dashboard_component_1.DashboardComponent,
+                team4talent_component_1.Team4TalentComponent,
+                person_component_1.PersonComponent
             ],
-            bootstrap: [app.AppComponent]
+            bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);
