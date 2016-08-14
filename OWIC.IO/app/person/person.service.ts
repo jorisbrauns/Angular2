@@ -6,7 +6,7 @@ import { PERSONS } from './mock-persons';
 export class PersonService {
     getPersons() {
         return new Promise<Person[]>(resolve =>
-            setTimeout(() => resolve(PERSONS), 2000)
+            setTimeout(() => resolve(PERSONS), 1000)
         );
     }
 }

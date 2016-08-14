@@ -6,12 +6,16 @@ import { Team4TalentComponent }     from './team4talent/team4talent.component';
 import { PersonComponent }          from './person/person.component';
 import { AppComponent }             from './app.component';
 import { Routing }                  from './app.routing';
+import { PersonService }            from './person/person.service';
 
 @NgModule({
   imports: [
     BrowserModule,
     Routing,
     FormsModule
+  ],
+  providers: [
+    PersonService
   ],
   declarations: [
     AppComponent,

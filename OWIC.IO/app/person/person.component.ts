@@ -3,8 +3,7 @@ import { Person } from './person-model';
 import { PersonService } from './person.service';
 
 @Component({
-    templateUrl: './app/person/person.component.html',
-    providers: [PersonService]
+    templateUrl: './app/person/person.component.html'
 })
 export class PersonComponent implements OnInit {
 
@@ -13,6 +12,6 @@ export class PersonComponent implements OnInit {
     constructor(private personService:PersonService) { }
 
     ngOnInit() {
-       this.personService.getPersons().then(persons => this.Persons = persons);
+  
     }
 }

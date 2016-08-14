@@ -15,7 +15,7 @@ var PersonService = (function () {
     }
     PersonService.prototype.getPersons = function () {
         return new Promise(function (resolve) {
-            return setTimeout(function () { return resolve(mock_persons_1.PERSONS); }, 2000);
+            return setTimeout(function () { return resolve(mock_persons_1.PERSONS); }, 1000);
         });
     };
     PersonService = __decorate([

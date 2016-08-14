@@ -15,13 +15,10 @@ var PersonComponent = (function () {
         this.personService = personService;
     }
     PersonComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.personService.getPersons().then(function (persons) { return _this.Persons = persons; });
     };
     PersonComponent = __decorate([
         core_1.Component({
-            templateUrl: './app/person/person.component.html',
-            providers: [person_service_1.PersonService]
+            templateUrl: './app/person/person.component.html'
         }), 
         __metadata('design:paramtypes', [person_service_1.PersonService])
     ], PersonComponent);

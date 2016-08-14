@@ -16,6 +16,7 @@ var team4talent_component_1 = require('./team4talent/team4talent.component');
 var person_component_1 = require('./person/person.component');
 var app_component_1 = require('./app.component');
 var app_routing_1 = require('./app.routing');
+var person_service_1 = require('./person/person.service');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -25,6 +26,9 @@ var AppModule = (function () {
                 platform_browser_1.BrowserModule,
                 app_routing_1.Routing,
                 forms_1.FormsModule
+            ],
+            providers: [
+                person_service_1.PersonService
             ],
             declarations: [
                 app_component_1.AppComponent,
