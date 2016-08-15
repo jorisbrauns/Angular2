@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Person } from './person-model';
 import { PersonService } from './person.service';
 
@@ -7,11 +7,9 @@ import { PersonService } from './person.service';
 })
 export class PersonComponent implements OnInit {
 
-    Persons: Person[];
-
-    constructor(private personService:PersonService) { }
+    constructor(private personService: PersonService) { }
 
     ngOnInit() {
-  
+
     }
 }
