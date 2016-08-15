@@ -6,6 +6,7 @@ import { PersonService } from './person.service';
 @Component({
     selector: 'persons',
     templateUrl: './app/person/person.component.html',
+    styleUrls: ['./app/person/person.component.css']
 })
 export class PersonComponent {
     error: any;

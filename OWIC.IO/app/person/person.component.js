@@ -50,6 +50,7 @@ var PersonComponent = (function () {
         core_1.Component({
             selector: 'persons',
             templateUrl: './app/person/person.component.html',
+            styleUrls: ['./app/person/person.component.css']
         }), 
         __metadata('design:paramtypes', [router_1.Router, person_service_1.PersonService])
     ], PersonComponent);
