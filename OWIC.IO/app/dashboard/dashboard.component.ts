@@ -4,19 +4,16 @@ import { Person } from '../person/person-model';
 
 @Component({
     templateUrl: './app/dashboard/dashboard.component.html',
+
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent {
 
     persons: Person[];
+    error: any;
 
-    constructor(private personService: PersonService) {
+    constructor() {
     }
 
-    ngOnInit() {
-        this.personService.getPersons().then(persons => this.persons = persons);
-        // this.personService.getPersons().then(function (response) {
-        //     console.log(response);
-        // });
-    }
+   
 
 }

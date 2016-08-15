@@ -9,23 +9,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var person_service_1 = require('../person/person.service');
 var DashboardComponent = (function () {
-    function DashboardComponent(personService) {
-        this.personService = personService;
+    function DashboardComponent() {
     }
-    DashboardComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.personService.getPersons().then(function (persons) { return _this.persons = persons; });
-        // this.personService.getPersons().then(function (response) {
-        //     console.log(response);
-        // });
-    };
     DashboardComponent = __decorate([
         core_1.Component({
             templateUrl: './app/dashboard/dashboard.component.html',
         }), 
-        __metadata('design:paramtypes', [person_service_1.PersonService])
+        __metadata('design:paramtypes', [])
     ], DashboardComponent);
     return DashboardComponent;
 }());

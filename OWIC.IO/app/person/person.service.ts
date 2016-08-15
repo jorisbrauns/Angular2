@@ -8,7 +8,7 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class PersonService {
 
-    private persons_api: 'app/api/persons';
+    private personsApi = 'app/persons';  // URL to web api
 
     constructor(private _http: Http) { }
 
@@ -21,7 +21,7 @@ export class PersonService {
 
     // Get all persons from mocked service in-memory-db
     getPersons(): Promise<Person[]> {
-        return this._http.get(this.persons_api)
+        return this._http.get(this.personsApi)
             .toPromise()
             .then(response => response.json().data as Person[])
             .catch(this.handleError);
@@ -44,7 +44,7 @@ export class PersonService {
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');
 
-        let url = `${this.persons_api}/${person.id}`;
+        let url = `${this.personsApi}/${person.id}`;
 
         return this._http
             .delete(url, { headers: headers })
@@ -61,7 +61,7 @@ export class PersonService {
         });
 
         return this._http
-            .post(this.persons_api, JSON.stringify(person), { headers: headers })
+            .post(this.personsApi, JSON.stringify(person), { headers: headers })
             .toPromise()
             .then(res => res.json().data)
             .catch(this.handleError);
@@ -72,7 +72,7 @@ export class PersonService {
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');
 
-        let url = `${this.persons_api}/${person.id}`;
+        let url = `${this.personsApi}/${person.id}`;
 
         return this._http
             .put(url, JSON.stringify(person), { headers: headers })

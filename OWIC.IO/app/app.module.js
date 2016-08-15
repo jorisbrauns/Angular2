@@ -11,6 +11,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
+// Imports for loading & configuring the in-memory web api
+var http_1 = require('@angular/http');
+var angular2_in_memory_web_api_1 = require('angular2-in-memory-web-api');
+var in_memory_data_service_1 = require('./api/in-memory-data.service');
 var dashboard_component_1 = require('./dashboard/dashboard.component');
 var team4talent_component_1 = require('./team4talent/team4talent.component');
 var person_component_1 = require('./person/person.component');
@@ -24,11 +28,14 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [
                 platform_browser_1.BrowserModule,
+                forms_1.FormsModule,
                 app_routing_1.Routing,
-                forms_1.FormsModule
+                http_1.HttpModule
             ],
             providers: [
-                person_service_1.PersonService
+                person_service_1.PersonService,
+                { provide: http_1.XHRBackend, useClass: angular2_in_memory_web_api_1.InMemoryBackendService },
+                { provide: angular2_in_memory_web_api_1.SEED_DATA, useClass: in_memory_data_service_1.InMemoryDataService } // in-mem server data
             ],
             declarations: [
                 app_component_1.AppComponent,

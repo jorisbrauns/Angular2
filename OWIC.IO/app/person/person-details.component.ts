@@ -24,6 +24,8 @@ export class PersonDetailsComponent implements OnInit {
         });
     }
 
+   
+
     save() {
         this.personService
             .save(this.person)
