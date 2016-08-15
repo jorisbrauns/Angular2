@@ -1,5 +1,4 @@
 // Imports
-import { AlertComponent } from 'ng2-bootstrap/ng2-bootstrap';
 import { DashboardRoutes } from './dashboard/dashboard.route';
 import { Team4TalentRoutes } from './team4talent/team4talent.route';
 import { PersonRoutes } from './person/person.route';

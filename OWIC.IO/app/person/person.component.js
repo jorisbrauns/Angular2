@@ -42,13 +42,14 @@ var PersonComponent = (function () {
         })
             .catch(function (error) { return _this.error = error; });
     };
-    PersonComponent.prototype.goToDetails = function () {
-        // this.router.navigate(['/detail', this.person.id]);
+    PersonComponent.prototype.edit = function (person, event) {
+        event.stopPropagation();
+        this.router.navigate(['/detail', person.id]);
     };
     PersonComponent = __decorate([
         core_1.Component({
             selector: 'persons',
-            templateUrl: './app/person/person.component.html'
+            templateUrl: './app/person/person.component.html',
         }), 
         __metadata('design:paramtypes', [router_1.Router, person_service_1.PersonService])
     ], PersonComponent);

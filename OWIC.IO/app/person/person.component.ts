@@ -5,7 +5,7 @@ import { PersonService } from './person.service';
 
 @Component({
     selector: 'persons',
-    templateUrl: './app/person/person.component.html'
+    templateUrl: './app/person/person.component.html',
 })
 export class PersonComponent {
     error: any;
@@ -40,7 +40,8 @@ export class PersonComponent {
             .catch(error => this.error = error);
     }
 
-    goToDetails() {
-        // this.router.navigate(['/detail', this.person.id]);
+    edit(person: Person,  event: any) {
+        event.stopPropagation();
+        this.router.navigate(['/detail', person.id]);
     }
 }

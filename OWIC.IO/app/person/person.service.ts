@@ -27,7 +27,7 @@ export class PersonService {
             .catch(this.handleError);
     }
 
-    getPerson(id: number) {
+    getPerson(id: string) {
         return this.getPersons()
             .then(persons => persons.find(person => person.id === id));
     }
