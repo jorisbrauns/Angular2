@@ -21,6 +21,7 @@ var person_component_1 = require('./person/person.component');
 var app_component_1 = require('./app.component');
 var app_routing_1 = require('./app.routing');
 var person_service_1 = require('./person/person.service');
+var Person_search_service_1 = require('./person/Person-search.service');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -34,6 +35,7 @@ var AppModule = (function () {
             ],
             providers: [
                 person_service_1.PersonService,
+                Person_search_service_1.PersonSearchService,
                 { provide: http_1.XHRBackend, useClass: angular2_in_memory_web_api_1.InMemoryBackendService },
                 { provide: angular2_in_memory_web_api_1.SEED_DATA, useClass: in_memory_data_service_1.InMemoryDataService } // in-mem server data
             ],

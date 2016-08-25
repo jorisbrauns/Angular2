@@ -13,6 +13,7 @@ import { PersonComponent }          from './person/person.component';
 import { AppComponent }             from './app.component';
 import { Routing }                  from './app.routing';
 import { PersonService }            from './person/person.service';
+import { PersonSearchService }            from './person/Person-search.service';
 
 @NgModule({
   imports: [
@@ -23,6 +24,7 @@ import { PersonService }            from './person/person.service';
   ],
    providers: [
     PersonService,
+    PersonSearchService,
     { provide: XHRBackend, useClass: InMemoryBackendService }, // in-mem server
     { provide: SEED_DATA,  useClass: InMemoryDataService }     // in-mem server data
   ],

@@ -1,0 +1,23 @@
+{
+  "name": "angular2-quickstart",
+  "description": "Learn project",
+  "main": "",
+  "authors": [
+    "Joris Brauns"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "angular2"
+  ],
+  "homepage": "https://github.com/jorisbrauns/AngularJS2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

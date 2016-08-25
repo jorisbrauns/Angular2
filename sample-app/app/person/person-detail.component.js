@@ -10,12 +10,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
+var person_model_1 = require('./person-model');
 var person_service_1 = require('./person.service');
 var PersonDetailComponent = (function () {
     function PersonDetailComponent(personService, route) {
         this.personService = personService;
         this.route = route;
-        this.close = new core_1.EventEmitter();
+        this.submitted = false;
+        this.state = new core_1.EventEmitter();
+        this.countries = ['Belgium', 'Italy', 'Germany', 'United States'];
     }
     PersonDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -25,29 +28,33 @@ var PersonDetailComponent = (function () {
                 _this.personService.getPerson(id)
                     .then(function (person) { return _this.person = person; });
             }
+            else {
+                _this.person = new person_model_1.Person("test", "test", "Raphael.kollner@gmail.com", 332423423423, "Germany");
+            }
         });
     };
     PersonDetailComponent.prototype.save = function () {
         var _this = this;
+        this.submitted = true;
         this.personService
             .save(this.person)
             .then(function (person) {
             _this.person = person;
-            _this.goBack(person);
         })
             .catch(function (error) { return _this.error = error; });
     };
-    PersonDetailComponent.prototype.goBack = function (savedPerson) {
-        if (savedPerson === void 0) { savedPerson = null; }
-        this.close.emit(savedPerson);
-    };
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', person_model_1.Person)
+    ], PersonDetailComponent.prototype, "person", void 0);
     __decorate([
         core_1.Output(), 
         __metadata('design:type', Object)
-    ], PersonDetailComponent.prototype, "close", void 0);
+    ], PersonDetailComponent.prototype, "state", void 0);
     PersonDetailComponent = __decorate([
         core_1.Component({
-            templateUrl: './app/person/person-detail.component.html'
+            templateUrl: './app/person/person-detail.component.html',
+            styleUrls: ['./app/person/person-detail.component.css']
         }), 
         __metadata('design:paramtypes', [person_service_1.PersonService, router_1.ActivatedRoute])
     ], PersonDetailComponent);

@@ -1,18 +1,22 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Person } from './person-model';
 import { PersonService } from './person.service';
 
 @Component({
-    templateUrl: './app/person/person-detail.component.html'
+    templateUrl: './app/person/person-detail.component.html',
+    styleUrls: ['./app/person/person-detail.component.css']
 })
 export class PersonDetailComponent implements OnInit {
-
-    person: Person;
-    @Output() close = new EventEmitter();
+    submitted = false;
+    @Input() person: Person;
+    @Output() state = new EventEmitter();
     error: any;
 
-    constructor(private personService: PersonService, private route: ActivatedRoute) { }
+    countries = ['Belgium', 'Italy', 'Germany', 'United States'];
+
+    constructor(private personService: PersonService, private route: ActivatedRoute) {
+    }
 
     ngOnInit() {
         this.route.params.forEach((params: Params) => {
@@ -20,21 +24,21 @@ export class PersonDetailComponent implements OnInit {
                 let id = params['id'];
                 this.personService.getPerson(id)
                     .then(person => this.person = person);
+            } else {
+                this.person = new Person("test", "test", "Raphael.kollner@gmail.com", 332423423423, "Germany");
             }
         });
     }
 
     save() {
+        this.submitted = true; 
         this.personService
             .save(this.person)
             .then(person => {
                 this.person = person;
-                this.goBack(person);
             })
             .catch(error => this.error = error);
     }
 
-    goBack(savedPerson: Person = null) {
-        this.close.emit(savedPerson);
-    }
+
 }
