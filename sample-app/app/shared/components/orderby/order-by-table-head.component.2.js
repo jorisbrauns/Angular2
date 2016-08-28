@@ -9,16 +9,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var DashboardComponent = (function () {
-    function DashboardComponent() {
+var OrderByComponent = (function () {
+    function OrderByComponent() {
+        this.clicked = new core_1.EventEmitter();
     }
-    DashboardComponent = __decorate([
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], OrderByComponent.prototype, "target", void 0);
+    __decorate([
+        core_1.Output(), 
+        __metadata('design:type', Object)
+    ], OrderByComponent.prototype, "clicked", void 0);
+    OrderByComponent = __decorate([
         core_1.Component({
-            templateUrl: './app/dashboard/dashboard.component.html'
+            selector: 'order-by-table-head',
+            templateUrl: './app/shared/Components/orderby/order-by-table-head.component.html',
+            styleUrls: ['./app/shared/Components/orderby/order-by-table-head.component.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], DashboardComponent);
-    return DashboardComponent;
+    ], OrderByComponent);
+    return OrderByComponent;
 }());
-exports.DashboardComponent = DashboardComponent;
-//# sourceMappingURL=dashboard.component.js.map
+exports.OrderByComponent = OrderByComponent;
+//# sourceMappingURL=order-by-table-head.component.2.js.map

@@ -19,11 +19,8 @@ var dashboard_component_1 = require('./dashboard/dashboard.component');
 var team4talent_component_1 = require('./team4talent/team4talent.component');
 var app_component_1 = require('./app.component');
 var app_routing_1 = require('./app.routing');
-// import { PersonService }            from './person/person.service';
-// import { PersonSearchService }      from './person/Person-search.service';
-// import { PersonComponent }          from './person/person.component';
-// import { PersonDetailComponent }    from './person/person-detail.component';
 var person = require('./person');
+var shared_1 = require('./shared');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -47,6 +44,7 @@ var AppModule = (function () {
                 team4talent_component_1.Team4TalentComponent,
                 person.PersonComponent,
                 person.PersonDetailComponent,
+                shared_1.OrderByComponent
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

@@ -3,8 +3,7 @@ import { PersonService} from '../person/person.service';
 import { Person } from '../person/person-model';
 
 @Component({
-    templateUrl: './app/dashboard/dashboard.component.html',
-
+    templateUrl: './app/dashboard/dashboard.component.html'
 })
 export class DashboardComponent {
 

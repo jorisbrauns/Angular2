@@ -28,9 +28,6 @@ var PersonDetailComponent = (function () {
                 _this.personService.getPerson(id)
                     .then(function (person) { return _this.person = person; });
             }
-            else {
-                _this.person = new person_model_1.Person("test", "test", "Raphael.kollner@gmail.com", 332423423423, "Germany");
-            }
         });
     };
     PersonDetailComponent.prototype.save = function () {

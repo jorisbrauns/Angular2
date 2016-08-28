@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var person_service_1 = require('./person.service');
+var shared_1 = require('../shared');
 var PersonComponent = (function () {
     function PersonComponent(router, _personService) {
         this.router = router;
@@ -18,6 +19,9 @@ var PersonComponent = (function () {
     }
     PersonComponent.prototype.ngOnInit = function () {
         this.getPersons();
+    };
+    PersonComponent.prototype.orderByUpdateAction = function (data) {
+        this.target = data;
     };
     PersonComponent.prototype.onSelect = function (person) {
         this.selectedPerson = person;
@@ -34,7 +38,6 @@ var PersonComponent = (function () {
         this._personService
             .delete(person)
             .then(function (res) {
-            console.log(res);
             _this.persons = _this.persons.filter(function (h) { return h !== person; });
             if (_this.selectedPerson === person) {
                 _this.selectedPerson = null;
@@ -50,7 +53,9 @@ var PersonComponent = (function () {
         core_1.Component({
             selector: 'persons',
             templateUrl: './app/person/person.component.html',
-            styleUrls: ['./app/person/person.component.css']
+            styleUrls: ['./app/person/person.component.css'],
+            pipes: [shared_1.OrderByPipeline],
+            directives: [shared_1.OrderByComponent]
         }), 
         __metadata('design:paramtypes', [router_1.Router, person_service_1.PersonService])
     ], PersonComponent);

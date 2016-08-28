@@ -24,9 +24,7 @@ export class PersonDetailComponent implements OnInit {
                 let id = params['id'];
                 this.personService.getPerson(id)
                     .then(person => this.person = person);
-            } else {
-                this.person = new Person("test", "test", "Raphael.kollner@gmail.com", 332423423423, "Germany");
-            }
+            } 
         });
     }
 
