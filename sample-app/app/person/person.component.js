@@ -13,15 +13,19 @@ var router_1 = require('@angular/router');
 var person_service_1 = require('./person.service');
 var shared_1 = require('../shared');
 var PersonComponent = (function () {
-    function PersonComponent(router, _personService) {
-        this.router = router;
+    function PersonComponent(_router, _personService) {
+        this._router = _router;
         this._personService = _personService;
+        this.orderByFilter = '+';
     }
     PersonComponent.prototype.ngOnInit = function () {
         this.getPersons();
+        this.orderByFilter = '+';
     };
-    PersonComponent.prototype.orderByUpdateAction = function (data) {
-        this.target = data;
+    PersonComponent.prototype.orderByUpdateAction = function (orderBy) {
+        var orderSign = orderBy.direction ? '+' : '-';
+        this.orderByTarget = orderBy;
+        this.orderByFilter = orderSign + orderBy.target;
     };
     PersonComponent.prototype.onSelect = function (person) {
         this.selectedPerson = person;
@@ -47,7 +51,7 @@ var PersonComponent = (function () {
     };
     PersonComponent.prototype.edit = function (person, event) {
         event.stopPropagation();
-        this.router.navigate(['/detail', person.id]);
+        this._router.navigate(['/detail', person.id]);
     };
     PersonComponent = __decorate([
         core_1.Component({

@@ -16,7 +16,7 @@ var OrderByComponent = (function () {
     OrderByComponent.prototype.ngOnChanges = function (changes) {
         var orderByIncoming = changes.orderByIncoming.currentValue;
         if (orderByIncoming) {
-            console.log(orderByIncoming);
+            this.active = orderByIncoming.target == this.target;
         }
     };
     OrderByComponent.prototype.onClick = function (btn) {

@@ -14,16 +14,20 @@ export class PersonComponent {
     error: any;
     persons: Person[];
     selectedPerson: Person;
-    target: any
+    orderByTarget: OrderBy;
+    orderByFilter = '+';
 
-    constructor(private router: Router, private _personService: PersonService) { }
+    constructor(private _router: Router, private _personService: PersonService) { }
 
     ngOnInit() {
         this.getPersons();
+        this.orderByFilter = '+';
     }
 
-    orderByUpdateAction(data){
-        this.target = data;
+    orderByUpdateAction(orderBy: OrderBy) {
+        let orderSign = orderBy.direction ? '+' : '-';
+        this.orderByTarget = orderBy;
+        this.orderByFilter = orderSign + orderBy.target;
     }
 
     onSelect(person: Person) {
@@ -49,6 +53,11 @@ export class PersonComponent {
 
     edit(person: Person, event: any) {
         event.stopPropagation();
-        this.router.navigate(['/detail', person.id]);
+        this._router.navigate(['/detail', person.id]);
     }
+}
+
+export interface OrderBy {
+    target: string;
+    direction: boolean;
 }

@@ -10,11 +10,12 @@ export class OrderByComponent implements OnChanges {
     @Input() target: string;
     @Output() orderByUpdate = new EventEmitter();
     @Input() orderByIncoming: any;
+    private active: boolean;
 
     ngOnChanges(changes: any): void {
         var orderByIncoming: any = changes.orderByIncoming.currentValue;
         if (orderByIncoming) {
-            console.log(orderByIncoming);
+            this.active = orderByIncoming.target == this.target;
         }
     }
 
@@ -23,6 +24,4 @@ export class OrderByComponent implements OnChanges {
         this.direction = !this.direction;
         this.orderByUpdate.emit({ target: this.target, direction: this.direction });
     }
-
-
 }

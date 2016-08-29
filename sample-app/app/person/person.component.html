@@ -1,13 +1,13 @@
 <div class="table-responsive">
     <table class="table table-striped">
         <thead>
-            <th order-by [target]="'firstName'" [orderByIncoming]="target" (orderByUpdate)="orderByUpdateAction($event)">First name</th>
-            <th order-by [target]="'lastName'" [orderByIncoming]="target" (orderByUpdate)="orderByUpdateAction($event)">Last name</th>
-            <th order-by [target]="'email'" [orderByIncoming]="target" (orderByUpdate)="orderByUpdateAction($event)">Email</th>
-            <th order-by [target]="'phoneNumber'" [orderByIncoming]="target" (orderByUpdate)="orderByUpdateAction($event)">Phone number</th>
+            <th order-by [target]="'firstName'" [orderByIncoming]="orderByTarget" (orderByUpdate)="orderByUpdateAction($event)">First name</th>
+            <th order-by [target]="'lastName'" [orderByIncoming]="orderByTarget" (orderByUpdate)="orderByUpdateAction($event)">Last name</th>
+            <th order-by [target]="'email'" [orderByIncoming]="orderByTarget" (orderByUpdate)="orderByUpdateAction($event)">Email</th>
+            <th order-by [target]="'phoneNumber'" [orderByIncoming]="orderByTarget" (orderByUpdate)="orderByUpdateAction($event)">Phone number</th>
         </thead>
         <tbody *ngIf="persons">
-            <tr *ngFor="let person of persons | orderBy : ['lastName','firstName']">
+            <tr *ngFor="let person of persons | orderBy : orderByFilter">
                 <td>{{ person.firstName }}</td>
                 <td>{{ person.lastName }}</td>
                 <td>{{ person.email }}</td>
