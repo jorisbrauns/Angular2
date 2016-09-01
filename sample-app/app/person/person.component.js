@@ -30,6 +30,9 @@ var PersonComponent = (function () {
     PersonComponent.prototype.onSelect = function (person) {
         this.selectedPerson = person;
     };
+    PersonComponent.prototype.onCreate = function () {
+        this._router.navigate(['/person/create']);
+    };
     PersonComponent.prototype.getPersons = function () {
         var _this = this;
         this._personService.getPersons()

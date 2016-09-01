@@ -35,6 +35,10 @@ export class PersonComponent {
         this.selectedPerson = person;
     }
 
+    onCreate(){
+        this._router.navigate(['/person/create']);
+    }
+
     getPersons() {
         this._personService.getPersons()
             .then(persons => this.persons = persons)

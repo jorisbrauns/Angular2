@@ -28,6 +28,9 @@ var PersonDetailComponent = (function () {
                 _this.personService.getPerson(id)
                     .then(function (person) { return _this.person = person; });
             }
+            else {
+                _this.person = new person_model_1.Person("", "", "", 0, "");
+            }
         });
     };
     PersonDetailComponent.prototype.save = function () {
