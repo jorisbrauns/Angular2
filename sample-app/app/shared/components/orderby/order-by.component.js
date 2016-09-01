@@ -13,11 +13,8 @@ var OrderByComponent = (function () {
     function OrderByComponent() {
         this.orderByUpdate = new core_1.EventEmitter();
     }
-    OrderByComponent.prototype.ngOnChanges = function (changes) {
-        var orderByIncoming = changes.orderByIncoming.currentValue;
-        if (orderByIncoming) {
-            this.active = orderByIncoming.target == this.target;
-        }
+    OrderByComponent.prototype.checkState = function (state) {
+        this.active = state.target == this.target;
     };
     OrderByComponent.prototype.onClick = function (btn) {
         this.direction = !this.direction;
@@ -31,10 +28,6 @@ var OrderByComponent = (function () {
         core_1.Output(), 
         __metadata('design:type', Object)
     ], OrderByComponent.prototype, "orderByUpdate", void 0);
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], OrderByComponent.prototype, "orderByIncoming", void 0);
     __decorate([
         core_1.HostListener('click', ['$event.target']), 
         __metadata('design:type', Function), 

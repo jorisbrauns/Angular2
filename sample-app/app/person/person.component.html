@@ -1,10 +1,10 @@
 <div class="table-responsive">
     <table class="table table-striped">
-        <thead>
-            <th order-by [target]="'firstName'" [orderByIncoming]="orderByTarget" (orderByUpdate)="orderByUpdateAction($event)">First name</th>
-            <th order-by [target]="'lastName'" [orderByIncoming]="orderByTarget" (orderByUpdate)="orderByUpdateAction($event)">Last name</th>
-            <th order-by [target]="'email'" [orderByIncoming]="orderByTarget" (orderByUpdate)="orderByUpdateAction($event)">Email</th>
-            <th order-by [target]="'phoneNumber'" [orderByIncoming]="orderByTarget" (orderByUpdate)="orderByUpdateAction($event)">Phone number</th>
+        <thead order-by (UpdateSort)="UpdateSort($event)">
+            <th order-by [target]="'firstName'">First name</th>
+            <th order-by [target]="'lastName'">Last name</th>
+            <th order-by [target]="'email'">Email</th>
+            <th order-by [target]="'phoneNumber'">Phone number</th>
         </thead>
         <tbody *ngIf="persons">
             <tr *ngFor="let person of persons | orderBy : orderByFilter">

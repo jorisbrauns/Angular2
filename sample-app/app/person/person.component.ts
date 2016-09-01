@@ -2,13 +2,14 @@ import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { Person } from './person-model';
 import { PersonService } from './person.service';
-import { OrderByPipeline, OrderByComponent } from '../shared';
+import { OrderByPipeline, OrderByComponent, OrderByHeadComponent, OrderBy } from '../shared';
+
 @Component({
     selector: 'persons',
     templateUrl: './app/person/person.component.html',
     styleUrls: ['./app/person/person.component.css'],
     pipes: [OrderByPipeline],
-    directives: [OrderByComponent]
+    directives: [OrderByComponent, OrderByHeadComponent]
 })
 export class PersonComponent {
     error: any;
@@ -24,7 +25,7 @@ export class PersonComponent {
         this.orderByFilter = '+';
     }
 
-    orderByUpdateAction(orderBy: OrderBy) {
+    UpdateSort(orderBy: OrderBy) {
         let orderSign = orderBy.direction ? '+' : '-';
         this.orderByTarget = orderBy;
         this.orderByFilter = orderSign + orderBy.target;
@@ -55,9 +56,4 @@ export class PersonComponent {
         event.stopPropagation();
         this._router.navigate(['/detail', person.id]);
     }
-}
-
-export interface OrderBy {
-    target: string;
-    direction: boolean;
 }

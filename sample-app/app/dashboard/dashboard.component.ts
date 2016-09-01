@@ -6,13 +6,6 @@ import { Person } from '../person/person-model';
     templateUrl: './app/dashboard/dashboard.component.html'
 })
 export class DashboardComponent {
-
     persons: Person[];
     error: any;
-
-    constructor() {
-    }
-
-   
-
 }

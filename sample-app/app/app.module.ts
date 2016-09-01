@@ -23,7 +23,6 @@ import { OrderByComponent }                             from './shared';
   ],
   providers: [
     person.PersonService,
-    person.PersonSearchService,
     { provide: XHRBackend, useClass: InMemoryBackendService }, // in-mem server
     { provide: SEED_DATA, useClass: InMemoryDataService }     // in-mem server data
   ],

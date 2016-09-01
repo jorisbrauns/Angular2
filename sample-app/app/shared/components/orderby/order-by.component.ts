@@ -1,22 +1,19 @@
 import { Component, Input, Output, EventEmitter, HostListener, OnChanges } from '@angular/core';
+import { OrderBy } from './';
 
 @Component({
     selector: 'th[order-by]',
     templateUrl: './app/shared/Components/orderby/order-by.component.html',
     styleUrls: ['./app/shared/Components/orderby/order-by.component.css']
 })
-export class OrderByComponent implements OnChanges {
+export class OrderByComponent {
     private direction: boolean;
     @Input() target: string;
     @Output() orderByUpdate = new EventEmitter();
-    @Input() orderByIncoming: any;
     private active: boolean;
 
-    ngOnChanges(changes: any): void {
-        var orderByIncoming: any = changes.orderByIncoming.currentValue;
-        if (orderByIncoming) {
-            this.active = orderByIncoming.target == this.target;
-        }
+    checkState(state: OrderBy) {
+        this.active = state.target == this.target;
     }
 
     @HostListener('click', ['$event.target'])

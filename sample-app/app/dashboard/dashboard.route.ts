@@ -3,5 +3,5 @@ import { DashboardComponent }          from './dashboard.component';
 
 // Route Configuration
 export const DashboardRoutes: RouterConfig = [
-  { path: 'dashboard', component: DashboardComponent },
+  { path: 'dashboard', component: DashboardComponent }
 ];

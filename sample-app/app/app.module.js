@@ -34,7 +34,6 @@ var AppModule = (function () {
             ],
             providers: [
                 person.PersonService,
-                person.PersonSearchService,
                 { provide: http_1.XHRBackend, useClass: angular2_in_memory_web_api_1.InMemoryBackendService },
                 { provide: angular2_in_memory_web_api_1.SEED_DATA, useClass: in_memory_data_service_1.InMemoryDataService } // in-mem server data
             ],

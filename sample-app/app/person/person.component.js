@@ -22,7 +22,7 @@ var PersonComponent = (function () {
         this.getPersons();
         this.orderByFilter = '+';
     };
-    PersonComponent.prototype.orderByUpdateAction = function (orderBy) {
+    PersonComponent.prototype.UpdateSort = function (orderBy) {
         var orderSign = orderBy.direction ? '+' : '-';
         this.orderByTarget = orderBy;
         this.orderByFilter = orderSign + orderBy.target;
@@ -59,7 +59,7 @@ var PersonComponent = (function () {
             templateUrl: './app/person/person.component.html',
             styleUrls: ['./app/person/person.component.css'],
             pipes: [shared_1.OrderByPipeline],
-            directives: [shared_1.OrderByComponent]
+            directives: [shared_1.OrderByComponent, shared_1.OrderByHeadComponent]
         }), 
         __metadata('design:paramtypes', [router_1.Router, person_service_1.PersonService])
     ], PersonComponent);
