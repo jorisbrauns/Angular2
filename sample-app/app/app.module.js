@@ -15,7 +15,6 @@ var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
 var angular2_in_memory_web_api_1 = require('angular2-in-memory-web-api');
 var in_memory_data_service_1 = require('./api/in-memory-data.service');
-var dashboard_component_1 = require('./dashboard/dashboard.component');
 var team4talent_component_1 = require('./team4talent/team4talent.component');
 var app_component_1 = require('./app.component');
 var app_routing_1 = require('./app.routing');
@@ -39,7 +38,6 @@ var AppModule = (function () {
             ],
             declarations: [
                 app_component_1.AppComponent,
-                dashboard_component_1.DashboardComponent,
                 team4talent_component_1.Team4TalentComponent,
                 person.PersonComponent,
                 person.PersonDetailComponent,

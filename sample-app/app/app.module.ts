@@ -7,7 +7,6 @@ import { HttpModule, XHRBackend }                       from '@angular/http';
 import { InMemoryBackendService, SEED_DATA }            from 'angular2-in-memory-web-api';
 import { InMemoryDataService }                          from './api/in-memory-data.service';
 
-import { DashboardComponent }                           from './dashboard/dashboard.component';
 import { Team4TalentComponent }                         from './team4talent/team4talent.component';
 import { AppComponent }                                 from './app.component';
 import { Routing }                                      from './app.routing';
@@ -28,7 +27,6 @@ import { OrderByComponent }                             from './shared';
   ],
   declarations: [
     AppComponent,
-    DashboardComponent,
     Team4TalentComponent,
     person.PersonComponent,
     person.PersonDetailComponent,
@@ -37,3 +35,4 @@ import { OrderByComponent }                             from './shared';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

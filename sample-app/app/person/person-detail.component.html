@@ -2,13 +2,13 @@
     <form name="personForm" (ngSubmit)="save()" *ngIf="person" #form="ngForm">
         <div class="form-group">
             <label for="firstName">First Name</label>
-            <input type="text" [(ngModel)]="person.firstName" class="form-control" name="firstName" id="firstName" [placeholder]="name.invalid && !name.pristine ? 'First Name is required' : 'First Name'"
+            <input type="text" [ngModel]="person.firstName" class="form-control" name="firstName" id="firstName" [placeholder]="name.invalid && !name.pristine ? 'First Name is required' : 'First Name'"
                 ref-name="ngModel" required>
         </div>
 
         <div class="form-group">
             <label for="lastName">Last Name</label>
-            <input type="text" [(ngModel)]="person.lastName" class="form-control" name="lastName" id="lastName" placeholder="Last Name"
+            <input type="text" [ngModel]="person.lastName" class="form-control" name="lastName" id="lastName" placeholder="Last Name"
                 ref-lastName="ngModel" required>
             <div [hidden]="lastName.valid || lastName.pristine" class="alert alert-danger">
                 Last name is required
@@ -17,18 +17,18 @@
 
         <div class="form-group">
             <label for="email">Email address</label>
-            <input type="text" [(ngModel)]="person.email" class="form-control" name="email" id="email" placeholder="Email" required>
+            <input type="text" [ngModel]="person.email" class="form-control" name="email" id="email" placeholder="Email" required>
         </div>
 
         <div class="form-group">
             <label for="phoneNumber"></label>
-            <input type="text" [(ngModel)]="person.phoneNumber" name="phoneNumber" class="form-control" id="phoneNumber" placeholder="Phone Number"
+            <input type="text" [ngModel]="person.phoneNumber" name="phoneNumber" class="form-control" id="phoneNumber" placeholder="Phone Number"
                 required>
         </div>
 
         <div class="form-group">
             <label for="country"></label>
-            <select [(ngModel)]="person.country" name="country" id="country" class="form-control" required> 
+            <select [ngModel]="person.country" name="country" id="country" class="form-control" required> 
             <option value="">Select country</option>
             <option *ngFor="let country of countries" [value]="country">{{country}}</option>
         </select>
@@ -37,6 +37,9 @@
         <button type="submit" class="btn btn-default" [disabled]="form.form.invalid">Save</button>
     </form>
 </div>
+
+
+
 
 
 <div [hidden]="!submitted">
