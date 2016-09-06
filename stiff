@@ -1,0 +1,132 @@
+warning: LF will be replaced by CRLF in sample-app/typings/globals/core-js/index.d.ts.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in sample-app/typings/globals/core-js/typings.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in sample-app/typings/globals/jasmine/index.d.ts.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in sample-app/typings/globals/jasmine/typings.json.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in sample-app/typings/globals/node/index.d.ts.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in sample-app/typings/globals/node/typings.json.
+The file will have its original line endings in your working directory.
+[1mdiff --git a/OWIC.IO/app/api/in-memory-data.service.js b/OWIC.IO/app/api/in-memory-data.service.js[m
+[1mindex 4cd9109..f9a130d 100644[m
+[1m--- a/OWIC.IO/app/api/in-memory-data.service.js[m
+[1m+++ b/OWIC.IO/app/api/in-memory-data.service.js[m
+[36m@@ -6,8 +6,9 @@[m [mvar InMemoryDataService = (function () {[m
+     InMemoryDataService.prototype.createDb = function () {[m
+         var persons = [[m
+             new person_model_1.Person("Joris", "Brauns", "info@owic.be", 32468198772, "Belgium"),[m
+[31m-            new person_model_1.Person("Tim", "Sommer", "tim.sommer@outlook.be", 32468982277, "Belgium"),[m
+[31m-            new person_model_1.Person("Raphael", "Köllner", "Raphael.kollner@gmail.com", 332423423423, "Germany")[m
+[32m+[m[32m            new person_model_1.Person("Tim", "Sommer", "info@owic.be", 32468982277, "Belgium"),[m
+[32m+[m[32m            new person_model_1.Person("Raphael", "Köllner", "Raphael.kollner@gmail.com", 332423423423, "Germany"),[m
+[32m+[m[32m            new person_model_1.Person("Christian", "Waha", "Christian.Waha@gmail.com", 332423423423, "Germany")[m
+         ];[m
+         return { persons: persons };[m
+     };[m
+[1mdiff --git a/OWIC.IO/app/api/in-memory-data.service.js.map b/OWIC.IO/app/api/in-memory-data.service.js.map[m
+[1mindex ea0282d..887a2dd 100644[m
+[1m--- a/OWIC.IO/app/api/in-memory-data.service.js.map[m
+[1m+++ b/OWIC.IO/app/api/in-memory-data.service.js.map[m
+[36m@@ -1 +1 @@[m
+[31m-{"version":3,"file":"in-memory-data.service.js","sourceRoot":"","sources":["in-memory-data.service.ts"],"names":[],"mappings":";AAAA,6BAAuB,wBAAwB,CAAC,CAAA;AAEhD;IAAA;IAUA,CAAC;IATG,sCAAQ,GAAR;QACI,IAAI,OAAO,GAAG;YACV,IAAI,qBAAM,CAAC,OAAO,EAAE,QAAQ,EAAE,cAAc,EAAE,WAAW,EAAE,SAAS,CAAC;YACrE,IAAI,qBAAM,CAAC,KAAK,EAAE,QAAQ,EAAE,uBAAuB,EAAE,WAAW,EAAE,SAAS,CAAC;YAC5E,IAAI,qBAAM,CAAC,SAAS,EAAE,SAAS,EAAE,2BAA2B,EAAE,YAAY,EAAE,SAAS,CAAC;SACzF,CAAC;QAEF,MAAM,CAAC,EAAE,SAAA,OAAO,EAAE,CAAC;IACvB,CAAC;IACL,0BAAC;AAAD,CAAC,AAVD,IAUC;AAVY,2BAAmB,sBAU/B,CAAA"}[m
+\ No newline at end of file[m
+[32m+[m[32m{"version":3,"file":"in-memory-data.service.js","sourceRoot":"","sources":["in-memory-data.service.ts"],"names":[],"mappings":";AAAA,6BAAuB,wBAAwB,CAAC,CAAA;AAEhD;IAAA;IAWA,CAAC;IAVG,sCAAQ,GAAR;QACI,IAAI,OAAO,GAAG;YACV,IAAI,qBAAM,CAAC,OAAO,EAAE,QAAQ,EAAE,cAAc,EAAE,WAAW,EAAE,SAAS,CAAC;YACrE,IAAI,qBAAM,CAAC,KAAK,EAAE,QAAQ,EAAE,cAAc,EAAE,WAAW,EAAE,SAAS,CAAC;YACnE,IAAI,qBAAM,CAAC,SAAS,EAAE,SAAS,EAAE,2BAA2B,EAAE,YAAY,EAAE,SAAS,CAAC;YACtF,IAAI,qBAAM,CAAC,WAAW,EAAE,MAAM,EAAE,0BAA0B,EAAE,YAAY,EAAE,SAAS,CAAC;SACvF,CAAC;QAEF,MAAM,CAAC,EAAE,SAAA,OAAO,EAAE,CAAC;IACvB,CAAC;IACL,0BAAC;AAAD,CAAC,AAXD,IAWC;AAXY,2BAAmB,sBAW/B,CAAA"}[m
+\ No newline at end of file[m
+[1mdiff --git a/OWIC.IO/app/api/in-memory-data.service.ts b/OWIC.IO/app/api/in-memory-data.service.ts[m
+[1mindex 8aa7004..b7ffa09 100644[m
+[1m--- a/OWIC.IO/app/api/in-memory-data.service.ts[m
+[1m+++ b/OWIC.IO/app/api/in-memory-data.service.ts[m
+[36m@@ -4,8 +4,9 @@[m [mexport class InMemoryDataService {[m
+     createDb() {[m
+         let persons = [[m
+             new Person("Joris", "Brauns", "info@owic.be", 32468198772, "Belgium"),[m
+[31m-            new Person("Tim", "Sommer", "tim.sommer@outlook.be", 32468982277, "Belgium"),[m
+[31m-            new Person("Raphael", "Köllner", "Raphael.kollner@gmail.com", 332423423423, "Germany")[m
+[32m+[m[32m            new Person("Tim", "Sommer", "info@owic.be", 32468982277, "Belgium"),[m
+[32m+[m[32m            new Person("Raphael", "Köllner", "Raphael.kollner@gmail.com", 332423423423, "Germany"),[m
+[32m+[m[32m            new Person("Christian", "Waha", "Christian.Waha@gmail.com", 332423423423, "Germany")[m
+         ];[m
+ [m
+         return { persons };[m
+[1mdiff --git a/OWIC.IO/app/app.component.css b/OWIC.IO/app/app.component.css[m
+[1mindex dc13e80..a1483b2 100644[m
+[1m--- a/OWIC.IO/app/app.component.css[m
+[1m+++ b/OWIC.IO/app/app.component.css[m
+[36m@@ -1,4 +1,20 @@[m
+ .navbar-inverse .navbar-nav a {[m
+     font-size: 19px;[m
+     padding: 27px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.mascot {[m
+[32m+[m[32m    position: absolute;[m
+[32m+[m[32m    bottom: -79px;[m
+[32m+[m[32m    left: 0;[m
+[32m+[m[32m    display: none;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.mascot-left {[m
+[32m+[m[32m        -moz-transform: scaleX(-1);[m
+[32m+[m[32m        -o-transform: scaleX(-1);[m
+[32m+[m[32m        -webkit-transform: scaleX(-1);[m
+[32m+[m[32m        transform: scaleX(-1);[m
+[32m+[m[32m        filter: FlipH;[m
+[32m+[m[32m        -ms-filter: "FlipH";[m
+ }[m
+\ No newline at end of file[m
+[1mdiff --git a/OWIC.IO/app/app.component.html b/OWIC.IO/app/app.component.html[m
+[1mindex 1859ac0..a776e49 100644[m
+[1m--- a/OWIC.IO/app/app.component.html[m
+[1m+++ b/OWIC.IO/app/app.component.html[m
+[36m@@ -16,7 +16,7 @@[m
+     <div id="navbar" class="navbar-collapse collapse">[m
+       <ul class="nav navbar-nav">[m
+         <li routerLinkActive="active"><a routerLink="/dashboard">Home</a></li>[m
+[31m-        <li routerLinkActive="active"><a routerLink="/team4talent">Team4Talent</a></li>[m
+[32m+[m[32m        <!--<li routerLinkActive="active"><a routerLink="/team4talent">Team4Talent</a></li>-->[m
+       </ul>[m
+     </div>[m
+   </div>[m
+[36m@@ -24,10 +24,8 @@[m
+ [m
+ <div class="jumbotron">[m
+   <div class="container">[m
+[31m-    <h1>Hello, world!</h1>[m
+[31m-    <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and[m
+[31m-      three supporting pieces of content. Use it as a starting point to create something more unique.</p>[m
+[31m-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>[m
+[32m+[m[32m    <h1 style="font-size:30px;">Join the world of Windows Insiders!</h1>[m
+[32m+[m[32m    <p>Get in touch with one of the local communities and their leaders. We make sure your feedback on Windows 10 matters!</p>[m
+   </div>[m
+ </div>[m
+ [m
+[36m@@ -35,4 +33,6 @@[m
+ [m
+   <router-outlet></router-outlet>[m
+ [m
+[31m-</div>[m
+\ No newline at end of file[m
+[32m+[m[32m</div>[m
+[32m+[m
+[32m+[m[32m<img class="mascot" src="images/win10_skype_320x320.0.gif" />[m
+\ No newline at end of file[m
+[1mdiff --git a/OWIC.IO/app/app.module.js b/OWIC.IO/app/app.module.js[m
+[1mindex 3642237..5efd614 100644[m
+[1m--- a/OWIC.IO/app/app.module.js[m
+[1m+++ b/OWIC.IO/app/app.module.js[m
+[36m@@ -21,6 +21,7 @@[m [mvar person_component_1 = require('./person/person.component');[m
+ var app_component_1 = require('./app.component');[m
+ var app_routing_1 = require('./app.routing');[m
+ var person_service_1 = require('./person/person.service');[m
+[32m+[m[32mvar sample_pipe_1 = require('./shared/pipes/sample.pipe');[m
+ var AppModule = (function () {[m
+     function AppModule() {[m
+     }[m
+[36m@@ -41,7 +42,8 @@[m [mvar AppModule = (function () {[m
+                 app_component_1.AppComponent,[m
+                 dashboard_component_1.DashboardComponent,[m
+                 team4talent_component_1.Team4TalentComponent,[m
+[31m-                p

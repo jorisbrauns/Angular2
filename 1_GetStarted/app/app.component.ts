@@ -1,6 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
 @Component({
-  selector: 'my-app',
-  template: '<h1>My First Angular 2 App</h1>'
+    selector: 'my-app',
+    template: 'Hello World!',
 })
-export class AppComponent { }
+export class AppComponent {
+
+}
+
