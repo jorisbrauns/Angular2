@@ -9,21 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var person_component_1 = require('./person/person.component');
-var owic_component_1 = require('./owic/owic.component');
-var AppComponent = (function () {
-    function AppComponent() {
+var OwicPageComponent = (function () {
+    function OwicPageComponent() {
     }
-    AppComponent = __decorate([
+    OwicPageComponent.prototype.ngOnInit = function () { };
+    OwicPageComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n        <h1>Hello World!</h1>\n        <person></person>\n        <owic-page></owic-page>\n    ",
-            styles: ["\n    h1 {\n        color: green;\n    }\n  "],
-            directives: [person_component_1.PersonComponent, owic_component_1.OwicPageComponent]
+            selector: 'owic-page',
+            templateUrl: './app/owic/owic.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], OwicPageComponent);
+    return OwicPageComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.OwicPageComponent = OwicPageComponent;
+//# sourceMappingURL=owic.component.js.map
