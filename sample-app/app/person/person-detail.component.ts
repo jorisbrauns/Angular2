@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Person } from './person-model';
 import { PersonService } from './person.service';
@@ -9,8 +9,7 @@ import { PersonService } from './person.service';
 })
 export class PersonDetailComponent implements OnInit {
     submitted = false;
-    @Input() person: Person;
-    @Output() state = new EventEmitter();
+    person: Person;
     error: any;
 
     countries = ['Belgium', 'Italy', 'Germany', 'United States'];

@@ -9,15 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var person_mocked_1 = require('../api/person.mocked');
+var test_component_1 = require('./test.component');
 var PersonListComponent = (function () {
     function PersonListComponent() {
+        this.subject = "List of persons...";
+        this.persons = person_mocked_1.PERSONS;
     }
     PersonListComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'person-list',
             templateUrl: 'person-list.component.html',
-            styleUrls: ['person-list.component.css']
+            styleUrls: ['person-list.component.css'],
+            directives: [test_component_1.TestComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], PersonListComponent);

@@ -9,25 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var person_mocked_1 = require('../api/person.mocked');
-var PersonListComponent = (function () {
-    function PersonListComponent(_router) {
-        this._router = _router;
-        this.persons = person_mocked_1.PERSONS;
+var TestComponent = (function () {
+    function TestComponent() {
     }
-    PersonListComponent.prototype.onClickPerson = function (person) {
-        this._router.navigate(['detail', person.id]);
-    };
-    PersonListComponent = __decorate([
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], TestComponent.prototype, "subject", void 0);
+    TestComponent = __decorate([
         core_1.Component({
-            moduleId: module.id,
-            templateUrl: 'person-list.component.html',
-            styleUrls: ['person-list.component.css']
+            selector: 'test',
+            template: '{{subject}}'
         }), 
-        __metadata('design:paramtypes', [router_1.Router])
-    ], PersonListComponent);
-    return PersonListComponent;
+        __metadata('design:paramtypes', [])
+    ], TestComponent);
+    return TestComponent;
 }());
-exports.PersonListComponent = PersonListComponent;
-//# sourceMappingURL=person-list.component.js.map
+exports.TestComponent = TestComponent;
+//# sourceMappingURL=test.component.js.map

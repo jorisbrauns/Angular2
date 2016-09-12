@@ -6,7 +6,7 @@ import { OwicPageComponent  } from './owic/owic.component';
     moduleId: module.id,
     selector: 'owic-app',
     templateUrl: 'app.component.html',
-    directives: [PersonListComponent, OwicPageComponent],
+    directives: [PersonListComponent],
 })
 export class AppComponent {
 }
