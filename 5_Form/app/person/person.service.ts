@@ -1,19 +1,17 @@
 import { Injectable } from '@angular/core';
-import { Person } from './person-model';
-import { PERSONS } from './mock-persons';
+import { Person } from './person.model';
+import { PERSONS } from '../api/person.mocked';
 import { Http, Response, Headers } from '@angular/http';
-
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class PersonService {
 
-    // private personsApi = 'http://localhost:5000/api/customers';  // URL to web api
-    private personsApi = 'api/persons';  // URL to web api
+    private personsApi = 'app/persons';  // URL to web api
 
     constructor(private _http: Http) { }
 
-    // Get all persons from mocked constant data
+    // Get all persons from mocked constant data         
     // getPersons() {
     //     return new Promise<Person[]>(resolve =>
     //         setTimeout(() => resolve(PERSONS), 1000)
@@ -24,10 +22,7 @@ export class PersonService {
     getPersons(): Promise<Person[]> {
         return this._http.get(this.personsApi)
             .toPromise()
-            .then(response => {
-                //  return response.json().data as Person[]
-                 return response.json().data as Person[]
-            })
+            .then(response => response.json().data as Person[])
             .catch(this.handleError);
     }
 
@@ -89,5 +84,4 @@ export class PersonService {
         console.error('An error occurred', error);
         return Promise.reject(error.message || error);
     }
-
-}
+}                                                       
