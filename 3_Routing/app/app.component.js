@@ -9,17 +9,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var person_component_1 = require('./person/person.component');
-var owic_component_1 = require('./owic/owic.component');
 var AppComponent = (function () {
     function AppComponent() {
     }
     AppComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n        <h1>Hello World!</h1>\n        <person></person>\n        <owic-page></owic-page>\n    ",
-            styles: ["\n    h1 {\n        color: green;\n    }\n  "],
-            directives: [person_component_1.PersonComponent, owic_component_1.OwicPageComponent]
+            moduleId: module.id,
+            selector: 'owic-app',
+            templateUrl: 'app.component.html',
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

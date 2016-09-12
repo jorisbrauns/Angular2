@@ -2,15 +2,19 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent }  from './app.component';
-import { PersonComponent }  from './person/person.component';
+import { PersonListComponent }  from './person/person-list.component';
 import { OwicPageComponent } from './owic/owic.component';
+import { RoutingModule } from './app.route';
 
 @NgModule({
-  imports: [BrowserModule],
+  imports: [
+    BrowserModule,
+    RoutingModule
+  ],
   declarations: [
     AppComponent,
-    PersonComponent
-    //  OwicPageComponent
+    PersonListComponent,
+    OwicPageComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -14,12 +14,10 @@ var PersonListComponent = (function () {
     }
     PersonListComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'person-list',
-            templateUrl: './app/person/person-list.component.html',
-            styleUrls: ['./app/person/person-list.component.css'],
-            //encapsulation: ViewEncapsulation.Native,
-            //encapsulation: ViewEncapsulation.None
-            encapsulation: core_1.ViewEncapsulation.Emulated // default 
+            templateUrl: 'person-list.component.html',
+            styleUrls: ['person-list.component.css']
         }), 
         __metadata('design:paramtypes', [])
     ], PersonListComponent);

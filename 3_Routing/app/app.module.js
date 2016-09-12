@@ -11,16 +11,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('./app.component');
-var person_component_1 = require('./person/person.component');
+var person_list_component_1 = require('./person/person-list.component');
+var owic_component_1 = require('./owic/owic.component');
+var app_route_1 = require('./app.route');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
+            imports: [
+                platform_browser_1.BrowserModule,
+                app_route_1.RoutingModule
+            ],
             declarations: [
                 app_component_1.AppComponent,
-                person_component_1.PersonComponent
+                person_list_component_1.PersonListComponent,
+                owic_component_1.OwicPageComponent
             ],
             providers: [],
             bootstrap: [app_component_1.AppComponent]

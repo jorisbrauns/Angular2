@@ -15,8 +15,9 @@ var OwicPageComponent = (function () {
     OwicPageComponent.prototype.ngOnInit = function () { };
     OwicPageComponent = __decorate([
         core_1.Component({
-            selector: 'owic-page',
-            templateUrl: './app/owic/owic.component.html'
+            moduleId: module.id,
+            templateUrl: 'owic.component.html',
+            styleUrls: ['owic.component.css']
         }), 
         __metadata('design:paramtypes', [])
     ], OwicPageComponent);

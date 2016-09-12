@@ -9,22 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var PersonComponent = (function () {
-    function PersonComponent() {
-        this.name = 'Joris Brauns';
+var PersonListComponent = (function () {
+    function PersonListComponent() {
     }
-    PersonComponent = __decorate([
+    PersonListComponent = __decorate([
         core_1.Component({
-            selector: 'person',
-            templateUrl: './app/person/person.component.html',
-            styleUrls: ['./app/person/person.component.css'],
-            //encapsulation: ViewEncapsulation.Native,
-            //encapsulation: ViewEncapsulation.None
-            encapsulation: core_1.ViewEncapsulation.Emulated // default 
+            moduleId: module.id,
+            templateUrl: 'person-list.component.html',
+            styleUrls: ['person-list.component.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], PersonComponent);
-    return PersonComponent;
+    ], PersonListComponent);
+    return PersonListComponent;
 }());
-exports.PersonComponent = PersonComponent;
-//# sourceMappingURL=person.component.js.map
+exports.PersonListComponent = PersonListComponent;
+//# sourceMappingURL=person-list.component.js.map

@@ -1,13 +1,12 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { Person } from './person.model';
 
 @Component({
+    moduleId: module.id,
     selector: 'person-list',
-    templateUrl: './app/person/person-list.component.html',
-    styleUrls: ['./app/person/person-list.component.css'],
-    //encapsulation: ViewEncapsulation.Native,
-    //encapsulation: ViewEncapsulation.None
-    encapsulation: ViewEncapsulation.Emulated // default 
+    templateUrl: 'person-list.component.html',
+    styleUrls: ['person-list.component.css']
 })
 export class PersonListComponent {
-    persons: string[]
+    persons: Person[];
 }

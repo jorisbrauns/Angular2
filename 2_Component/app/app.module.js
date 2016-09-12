@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('./app.component');
 var person_list_component_1 = require('./person/person-list.component');
+var owic_component_1 = require('./owic/owic.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -20,7 +21,8 @@ var AppModule = (function () {
             imports: [platform_browser_1.BrowserModule],
             declarations: [
                 app_component_1.AppComponent,
-                person_list_component_1.PersonListComponent
+                person_list_component_1.PersonListComponent,
+                owic_component_1.OwicPageComponent
             ],
             providers: [],
             bootstrap: [app_component_1.AppComponent]

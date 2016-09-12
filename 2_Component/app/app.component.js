@@ -10,14 +10,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var person_list_component_1 = require('./person/person-list.component');
+var owic_component_1 = require('./owic/owic.component');
 var AppComponent = (function () {
     function AppComponent() {
     }
     AppComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'owic-app',
-            templateUrl: './app/app.component.html',
-            directives: [person_list_component_1.PersonListComponent],
+            templateUrl: 'app.component.html',
+            directives: [person_list_component_1.PersonListComponent, owic_component_1.OwicPageComponent],
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
