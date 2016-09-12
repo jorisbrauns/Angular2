@@ -14,7 +14,6 @@ import { OrderByPipeline, OrderByComponent, OrderByHeadComponent, OrderBy } from
 export class PersonComponent {
     error: any;
     persons: Person[];
-    selectedPerson: Person;
     orderByTarget: OrderBy;
     orderByFilter = '+';
 
@@ -29,10 +28,6 @@ export class PersonComponent {
         let orderSign = orderBy.direction ? '+' : '-';
         this.orderByTarget = orderBy;
         this.orderByFilter = orderSign + orderBy.target;
-    }
-
-    onSelect(person: Person) {
-        this.selectedPerson = person;
     }
 
     onCreate(){
@@ -51,7 +46,6 @@ export class PersonComponent {
             .delete(person)
             .then(res => {
                 this.persons = this.persons.filter(h => h !== person);
-                if (this.selectedPerson === person) { this.selectedPerson = null; }
             })
             .catch(error => this.error = error);
     }

@@ -9,8 +9,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
 var PersonListComponent = (function () {
-    function PersonListComponent() {
+    function PersonListComponent(_router) {
+        this._router = _router;
+        // _router.navigate([ 'about' ]);
     }
     PersonListComponent = __decorate([
         core_1.Component({
@@ -18,7 +21,7 @@ var PersonListComponent = (function () {
             templateUrl: 'person-list.component.html',
             styleUrls: ['person-list.component.css']
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.Router])
     ], PersonListComponent);
     return PersonListComponent;
 }());

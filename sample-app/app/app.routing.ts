@@ -1,5 +1,5 @@
 // Imports
-import { Team4TalentRoutes } from './team4talent/team4talent.route';
+import { OwicRoutes } from './owic/owic.route';
 import { PersonRoutes } from './person/person.route';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -9,7 +9,7 @@ const appRoutes: Routes = [
     redirectTo: '/persons',
     pathMatch: 'full'
   },
-  ...Team4TalentRoutes,
+  ...OwicRoutes,
   ...PersonRoutes
 ];
 

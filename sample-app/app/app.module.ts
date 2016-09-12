@@ -7,7 +7,7 @@ import { HttpModule, XHRBackend }                       from '@angular/http';
 import { InMemoryBackendService, SEED_DATA }            from 'angular2-in-memory-web-api';
 import { InMemoryDataService }                          from './api/in-memory-data.service';
 
-import { Team4TalentComponent }                         from './team4talent/team4talent.component';
+import { OwicPageComponent }                                from './owic/owic.component';
 import { AppComponent }                                 from './app.component';
 import { Routing }                                      from './app.routing';
 import * as person                                      from './person';
@@ -27,7 +27,7 @@ import { OrderByComponent }                             from './shared';
   ],
   declarations: [
     AppComponent,
-    Team4TalentComponent,
+    OwicPageComponent,
     person.PersonComponent,
     person.PersonDetailComponent,
     OrderByComponent
