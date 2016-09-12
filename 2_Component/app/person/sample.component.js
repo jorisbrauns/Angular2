@@ -9,21 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var TestComponent = (function () {
-    function TestComponent() {
+var SampleComponent = (function () {
+    function SampleComponent() {
     }
     __decorate([
         core_1.Input(), 
         __metadata('design:type', String)
-    ], TestComponent.prototype, "subject", void 0);
-    TestComponent = __decorate([
+    ], SampleComponent.prototype, "subject", void 0);
+    SampleComponent = __decorate([
         core_1.Component({
-            selector: 'test',
+            selector: 'sample',
             template: '{{subject}}'
         }), 
         __metadata('design:paramtypes', [])
-    ], TestComponent);
-    return TestComponent;
+    ], SampleComponent);
+    return SampleComponent;
 }());
-exports.TestComponent = TestComponent;
-//# sourceMappingURL=test.component.js.map
+exports.SampleComponent = SampleComponent;
+//# sourceMappingURL=sample.component.js.map

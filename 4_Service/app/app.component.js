@@ -9,24 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var person_mocked_1 = require('../api/person.mocked');
-var sample_component_1 = require('./sample.component');
-var PersonListComponent = (function () {
-    function PersonListComponent() {
-        this.subject = "List of persons...";
-        this.persons = person_mocked_1.PERSONS;
+var AppComponent = (function () {
+    function AppComponent() {
     }
-    PersonListComponent = __decorate([
+    AppComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'person-list',
-            templateUrl: 'person-list.component.html',
-            styleUrls: ['person-list.component.css'],
-            directives: [sample_component_1.SampleComponent]
+            selector: 'owic-app',
+            templateUrl: 'app.component.html',
         }), 
         __metadata('design:paramtypes', [])
-    ], PersonListComponent);
-    return PersonListComponent;
+    ], AppComponent);
+    return AppComponent;
 }());
-exports.PersonListComponent = PersonListComponent;
-//# sourceMappingURL=person-list.component.js.map
+exports.AppComponent = AppComponent;
+//# sourceMappingURL=app.component.js.map

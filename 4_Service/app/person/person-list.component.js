@@ -9,22 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var person_mocked_1 = require('../api/person.mocked');
-var sample_component_1 = require('./sample.component');
+var router_1 = require('@angular/router');
+var person_service_1 = require('./person.service');
 var PersonListComponent = (function () {
-    function PersonListComponent() {
-        this.subject = "List of persons...";
-        this.persons = person_mocked_1.PERSONS;
+    function PersonListComponent(_router, _personService) {
+        var _this = this;
+        this._router = _router;
+        this._personService = _personService;
+        _personService.getPersons().then(function (result) { return _this.persons = result; });
     }
+    PersonListComponent.prototype.onClickPerson = function (person) {
+        this._router.navigate(['detail', person.id]);
+    };
     PersonListComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
-            selector: 'person-list',
             templateUrl: 'person-list.component.html',
-            styleUrls: ['person-list.component.css'],
-            directives: [sample_component_1.SampleComponent]
+            styleUrls: ['person-list.component.css']
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.Router, person_service_1.PersonService])
     ], PersonListComponent);
     return PersonListComponent;
 }());

@@ -1,0 +1,4 @@
+<h1>List of persons..</h1>
+<ul>
+    <li *ngFor="let person of persons" (click)="onClickPerson(person)">{{ person.firstName }} {{ person.lastName }}</li>
+</ul>

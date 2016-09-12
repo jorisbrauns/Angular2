@@ -9,23 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var person_mocked_1 = require('./person.mocked');
-var http_1 = require('@angular/http');
-var PersonService = (function () {
-    function PersonService(_http) {
-        this._http = _http;
+var OwicPageComponent = (function () {
+    function OwicPageComponent() {
     }
-    // Get all persons from mocked constant data         
-    PersonService.prototype.getPersons = function () {
-        return new Promise(function (resolve) {
-            return setTimeout(function () { return resolve(person_mocked_1.PERSONS); }, 1000);
-        });
-    };
-    PersonService = __decorate([
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.Http])
-    ], PersonService);
-    return PersonService;
+    OwicPageComponent.prototype.ngOnInit = function () { };
+    OwicPageComponent = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            templateUrl: 'owic.component.html',
+            styleUrls: ['owic.component.css']
+        }), 
+        __metadata('design:paramtypes', [])
+    ], OwicPageComponent);
+    return OwicPageComponent;
 }());
-exports.PersonService = PersonService;
-//# sourceMappingURL=person.service.js.map
+exports.OwicPageComponent = OwicPageComponent;
+//# sourceMappingURL=owic.component.js.map
