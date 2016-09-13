@@ -8,7 +8,6 @@ export class InMemoryDataService {
             new Person("Raphael", "Köllner", "Raphael.kollner@gmail.com", 332423423423, "Germany"),
             new Person("Albert", "Brauns", "Raphael.kollner@gmail.com", 332423423423, "Germany")
         ];
-
         return { persons };
     }
 }
